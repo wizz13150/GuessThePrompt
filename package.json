@@ -1,0 +1,36 @@
+{
+  "name": "civitai-prompt-minigame",
+  "version": "1.9.0",
+  "private": true,
+  "description": "Public-demo ready Civitai Guess The Prompt minigame with visitor-supplied API keys, reroll/next controls, debug console, and Render deployment support.",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail -n server,client -c green,cyan \"tsx watch server/index.ts\" \"vite\"",
+    "build": "vite build && tsc -p tsconfig.server.json",
+    "start": "node dist-server/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:client": "vite",
+    "doctor": "node scripts/doctor.mjs",
+    "smoke:test": "node scripts/smoke-test.mjs"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.8",
+    "@vitejs/plugin-react": "^4.4.0",
+    "concurrently": "^9.1.2",
+    "hono": "^4.6.20",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

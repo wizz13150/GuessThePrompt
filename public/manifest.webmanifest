@@ -1,0 +1,10 @@
+{
+  "name": "Prompt Detective",
+  "short_name": "PromptDetective",
+  "description": "Civitai-ready prompt guessing minigame prototype.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090910",
+  "theme_color": "#101019",
+  "icons": []
+}

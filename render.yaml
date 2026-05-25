@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: civitai-prompt-minigame
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: APP_MODE
+        value: civitai
+      - key: PLAYER_NAME
+        value: Guest
+      - key: CIVITAI_ORCHESTRATOR_URL
+        value: https://orchestration.civitai.com
+      - key: CIVITAI_GENERATION_TIMEOUT_MS
+        value: "120000"

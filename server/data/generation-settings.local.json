@@ -1,0 +1,12 @@
+{
+  "modelPreset": "sdxl-base",
+  "modelAir": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "width": 1024,
+  "height": 1024,
+  "steps": 28,
+  "cfgScale": 5,
+  "batch": 1,
+  "seed": null,
+  "negativePromptExtra": "",
+  "loras": []
+}
